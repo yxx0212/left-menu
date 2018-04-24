@@ -1,0 +1,128 @@
+body {
+  line-height: 1.4;
+  color: #333;
+  font-family: arial;
+  font-size: 12px;
+  background: white;
+}
+body input,
+body textarea,
+body select {
+  font-size: 12px;
+  font-size: 100%;
+  font-family: arial;
+  font-family: inherit;
+}
+body h4,
+body h5,
+body h6 {
+  font-size: 1em;
+}
+body ul,
+body ol {
+  padding-left: 0;
+  list-style-type: none;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+form {
+  margin: 0;
+}
+/*image with no-border*/
+a img {
+  border: 0;
+}
+img {
+  border: 0;
+}
+.menu {
+  width: 260px;
+  margin-left: 50px;
+  margin-top: 50px;
+}
+.menu > ul > li {
+  position: relative;
+  width: 240px;
+  /* height: 50px; */
+  line-height: 50px;
+  background: #ec7b3e;
+  /* background: #ff7132; */
+  cursor: pointer;
+}
+.menu > ul > li > a {
+  display: inline-block;
+  border-bottom: 1px solid #de6a0a;
+  height: 54px;
+  width: 240px;
+  padding-left: 20px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: "MicrosoftYahei";
+  outline: none;
+  box-sizing: border-box;
+}
+.menu > ul > li > a .menu-icon {
+  font-size: 20px;
+  padding-right: 8px;
+}
+.menu > ul > li > ul {
+  background: #de743b;
+  display: none;
+  /* background: #f69865; */
+}
+.menu > ul > li > ul > li.item {
+  height: 38px;
+  line-height: 38px;
+  border-bottom: 1px solid #de6a0a;
+}
+.menu > ul > li > ul > li.item > span.doc {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #fff;
+  margin-left: 35px;
+  margin-right: -43px;
+}
+.menu > ul > li > ul > li.item a {
+  padding-left: 48px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  font-family: "MicrosoftYahei";
+  outline: none;
+  display: inline-block;
+  width: 190px;
+}
+.menu > ul > li > ul > li.item a.active {
+  padding-left: 5px;
+}
+.menu > ul > li:after {
+  position: absolute;
+  top: 26px;
+  right: 8px;
+  margin-top: -6px;
+  border: 7px solid transparent;
+  border-left: 7px solid #fff;
+  content: '';
+}
+.menu > ul > li.active-li:after {
+  transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  /* IE 9 */
+  -moz-transform: rotate(90deg);
+  /* Firefox */
+  -webkit-transform: rotate(90deg);
+  /* Safari 和 Chrome */
+  -o-transform: rotate(90deg);
+  /* Opera */
+}

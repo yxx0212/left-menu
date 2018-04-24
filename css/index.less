@@ -1,0 +1,83 @@
+@import url(common.less);
+
+.menu{
+	width: 260px;
+	margin-left: 50px;
+	margin-top: 50px;
+	> ul >li{
+		position: relative;
+		width: 240px;
+		/* height: 50px; */
+		line-height: 50px;
+		background: #ec7b3e;
+		/* background: #ff7132; */
+		cursor: pointer;
+		>a{
+			display: inline-block;
+			border-bottom: 1px solid #de6a0a;
+			height: 54px;
+			width: 240px;
+			padding-left: 20px;
+			color: #fff;
+			text-decoration: none;
+			font-size: 18px;
+			font-family: "MicrosoftYahei";
+			outline: none;
+			box-sizing: border-box;
+			.menu-icon{
+				font-size: 20px;
+				padding-right: 8px;
+			}
+		}
+		> ul {
+			background: #de743b;
+			display: none;
+			/* background: #f69865; */
+			>li.item{
+				height: 38px;
+				line-height: 38px;
+				border-bottom: 1px solid #de6a0a;
+				> span.doc{
+					display: inline-block;
+					width: 5px;
+					height: 5px;
+					border-radius: 50%;
+					background: #fff;
+					margin-left: 35px;
+					margin-right: -43px;
+				}
+				a{
+					padding-left: 48px;
+					text-decoration: none;
+					color: #fff;
+					font-size: 16px;
+					font-family: "MicrosoftYahei";
+					outline: none;
+					display: inline-block;
+					width: 190px;
+				}
+				a.active{
+					padding-left: 5px;
+				}
+			}
+		}
+		&:after{
+			position: absolute;
+			top:26px;
+			right: 8px;
+			margin-top:-6px;
+			border:7px solid transparent;
+			border-left: 7px solid #fff;
+			content: '';
+		}
+	}
+	> ul >li.active-li{
+		&:after{
+			transform:rotate(90deg);
+			-ms-transform:rotate(90deg); 	/* IE 9 */
+			-moz-transform:rotate(90deg); 	/* Firefox */
+			-webkit-transform:rotate(90deg); /* Safari 和 Chrome */
+			-o-transform:rotate(90deg); 	/* Opera */
+		}
+	}
+}

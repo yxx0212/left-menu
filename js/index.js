@@ -1,0 +1,10 @@
+$(document).ready(function(){
+	//一级菜单的点击事件
+	$(".nav-a").on("click",function(){
+		$(this).next().slideToggle();
+		$(this).parent(".nav-li").toggleClass('active-li');
+	});
+	$(".item>a").on("click",function(){
+		$(this).prev("span").addClass('doc').parents("li").siblings().find("span").removeClass('doc');
+	})
+})
