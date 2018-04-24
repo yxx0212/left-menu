@@ -83,6 +83,8 @@ img {
 .menu > ul > li > ul > li.item {
   height: 50px;
   line-height: 50px;
+  padding-left: 48px;
+  box-sizing: border-box;
   /* border-bottom: 1px solid #de6a0a; */
 }
 .menu > ul > li > ul > li.item > span.doc {
@@ -95,7 +97,6 @@ img {
   margin-right: -43px;
 }
 .menu > ul > li > ul > li.item a {
-  padding-left: 48px;
   text-decoration: none;
   color: #000;
   font-size: 16px;
@@ -107,6 +108,7 @@ img {
 .menu > ul > li > ul > li.active {
   background: #fff6f1;
   border-left: 2px solid #fe7300;
+  padding-left: 47px;
 }
 .menu > ul > li:after {
   position: absolute;
