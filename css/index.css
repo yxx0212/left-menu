@@ -53,37 +53,37 @@ img {
   width: 240px;
   /* height: 50px; */
   line-height: 50px;
-  /* background: #ec7b3e; */
-  background: #fe7300;
+  /* background: #ff6f3d; */
   cursor: pointer;
 }
 .menu > ul > li > a {
   display: inline-block;
-  border-bottom: 1px solid #de6a0a;
+  border-bottom: 1px solid #e7e7e7;
   height: 54px;
   width: 240px;
-  padding-left: 20px;
-  color: #fff;
+  /* padding-left: 20px; */
+  color: #333;
   text-decoration: none;
   font-size: 18px;
   font-family: "MicrosoftYahei";
   outline: none;
   box-sizing: border-box;
 }
-.menu > ul > li > a .menu-icon {
+.menu > ul > li > a i.menu-icon {
   font-size: 20px;
   padding-right: 8px;
+  color: #999;
+  padding-left: 22px;
+  padding-right: 18px;
 }
 .menu > ul > li > ul {
-  /* background: #de743b; */
   background: #fff;
   display: none;
-  /* background: #f69865; */
 }
 .menu > ul > li > ul > li.item {
   height: 50px;
   line-height: 50px;
-  padding-left: 48px;
+  padding-left: 30px;
   box-sizing: border-box;
   /* border-bottom: 1px solid #de6a0a; */
 }
@@ -98,26 +98,31 @@ img {
 }
 .menu > ul > li > ul > li.item a {
   text-decoration: none;
-  color: #000;
+  color: #666;
   font-size: 16px;
   font-family: "MicrosoftYahei";
   outline: none;
   display: inline-block;
   width: 190px;
+  padding-left: 0;
 }
 .menu > ul > li > ul > li.active {
   background: #fff6f1;
-  border-left: 2px solid #fe7300;
-  padding-left: 47px;
+}
+.menu > ul > li > ul > li.active > a {
+  color: #000;
 }
 .menu > ul > li:after {
   position: absolute;
   top: 26px;
-  right: 8px;
+  right: 1px;
   margin-top: -6px;
   border: 7px solid transparent;
-  border-left: 7px solid #fff;
+  border-left: 7px solid #ff6f3d;
   content: '';
+}
+.menu > ul > li.active-li > ul > li > a {
+  padding-left: 32px;
 }
 .menu > ul > li.active-li:after {
   transform: rotate(90deg);
@@ -129,4 +134,16 @@ img {
   /* Safari 和 Chrome */
   -o-transform: rotate(90deg);
   /* Opera */
+}
+.menu > ul > li.spc > ul > li > a {
+  padding-left: 32px;
+}
+.menu > ul > li.spc > a {
+  color: #ff6f3d;
+  font-weight: bold;
+  border-left: 4px solid #ff6f3d;
+}
+.menu > ul > li.spc > a i {
+  color: #ff6f3d;
+  padding-left: 18px;
 }

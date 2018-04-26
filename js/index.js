@@ -11,5 +11,7 @@ $(document).ready(function(){
 		
 		$(this).parents("ul.nav").find('li.active').removeClass('active');
 		$(this).parent("li.item").addClass('active');
+		$(this).parents("ul.nav").find("li.spc").removeClass('spc');
+		$(this).parents("li.nav-li").addClass('spc');
 	});
 })
