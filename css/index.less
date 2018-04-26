@@ -69,23 +69,33 @@
 				}
 			}
 		}
-		&:after{
+		&:before,&:after{
 			position: absolute;
 			top:26px;
 			right: 1px;
-			margin-top:-6px;
-			border:7px solid transparent;
-			border-left: 7px solid #999;
+			/* margin-top:-6px; */
+			width: 10px;
+			height: 2px;
+			border-radius: 10px;
+			background: #999;
+			/* border:7px solid transparent;
+			border-left: 7px solid #999; */
 			content: '';
 		}
 	}
 	> ul >li.active-li{
+		&:before{
+			transform: translateX(-3px) rotate(45deg);
+		}
+		/* &:after{
+			transform:rotate(-90deg);
+			-ms-transform:rotate(-90deg); 	 IE 9
+			-moz-transform:rotate(-90deg); 	Firefox
+			-webkit-transform:rotate(-90deg); Safari 和 Chrome
+			-o-transform:rotate(-90deg); 	Opera
+		} */
 		&:after{
-			transform:rotate(90deg);
-			-ms-transform:rotate(90deg); 	/* IE 9 */
-			-moz-transform:rotate(90deg); 	/* Firefox */
-			-webkit-transform:rotate(90deg); /* Safari 和 Chrome */
-			-o-transform:rotate(90deg); 	/* Opera */
+			transform: translateX(3px) rotate(-45deg);
 		}
 	}
 	>ul >li.spc{
@@ -96,9 +106,16 @@
 				color: #ff6f3d;
 			}
 		}
-		&:after{
-			border:7px solid transparent;
-			border-left: 7px solid #ff6f3d;
+		&:before,&:after{
+			background: #ff6f3d;
+			/* border:7px solid transparent;
+			border-left: 7px solid #ff6f3d; */
 		}
+	}
+	.nav-li:before{
+		transform: translateY(-3px) rotate(45deg);
+	}
+	.nav-li:after{
+		transform: translateY(3px) rotate(-45deg);
 	}
 }

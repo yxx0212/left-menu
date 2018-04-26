@@ -114,25 +114,34 @@ img {
   color: #000;
   padding-left: 6px;
 }
+.menu > ul > li:before,
 .menu > ul > li:after {
   position: absolute;
   top: 26px;
   right: 1px;
-  margin-top: -6px;
-  border: 7px solid transparent;
-  border-left: 7px solid #999;
+  /* margin-top:-6px; */
+  width: 10px;
+  height: 2px;
+  border-radius: 10px;
+  background: #999;
+  /* border:7px solid transparent;
+			border-left: 7px solid #999; */
   content: '';
 }
+.menu > ul > li.active-li {
+  /* &:after{
+			transform:rotate(-90deg);
+			-ms-transform:rotate(-90deg); 	 IE 9
+			-moz-transform:rotate(-90deg); 	Firefox
+			-webkit-transform:rotate(-90deg); Safari 和 Chrome
+			-o-transform:rotate(-90deg); 	Opera
+		} */
+}
+.menu > ul > li.active-li:before {
+  transform: translateX(-3px) rotate(45deg);
+}
 .menu > ul > li.active-li:after {
-  transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  /* IE 9 */
-  -moz-transform: rotate(90deg);
-  /* Firefox */
-  -webkit-transform: rotate(90deg);
-  /* Safari 和 Chrome */
-  -o-transform: rotate(90deg);
-  /* Opera */
+  transform: translateX(3px) rotate(-45deg);
 }
 .menu > ul > li.spc > a {
   color: #ff6f3d;
@@ -141,7 +150,15 @@ img {
 .menu > ul > li.spc > a i {
   color: #ff6f3d;
 }
+.menu > ul > li.spc:before,
 .menu > ul > li.spc:after {
-  border: 7px solid transparent;
-  border-left: 7px solid #ff6f3d;
+  background: #ff6f3d;
+  /* border:7px solid transparent;
+			border-left: 7px solid #ff6f3d; */
+}
+.menu .nav-li:before {
+  transform: translateY(-3px) rotate(45deg);
+}
+.menu .nav-li:after {
+  transform: translateY(3px) rotate(-45deg);
 }
