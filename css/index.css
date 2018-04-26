@@ -73,7 +73,7 @@ img {
   font-size: 20px;
   padding-right: 8px;
   color: #999;
-  padding-left: 22px;
+  /* padding-left: 22px; */
   padding-right: 18px;
 }
 .menu > ul > li > ul {
@@ -104,13 +104,15 @@ img {
   outline: none;
   display: inline-block;
   width: 190px;
-  padding-left: 0;
+  padding-left: 10px;
 }
 .menu > ul > li > ul > li.active {
   background: #fff6f1;
+  border-left: 4px solid #ff6f3d;
 }
 .menu > ul > li > ul > li.active > a {
   color: #000;
+  padding-left: 6px;
 }
 .menu > ul > li:after {
   position: absolute;
@@ -118,11 +120,8 @@ img {
   right: 1px;
   margin-top: -6px;
   border: 7px solid transparent;
-  border-left: 7px solid #ff6f3d;
+  border-left: 7px solid #999;
   content: '';
-}
-.menu > ul > li.active-li > ul > li > a {
-  padding-left: 32px;
 }
 .menu > ul > li.active-li:after {
   transform: rotate(90deg);
@@ -135,15 +134,14 @@ img {
   -o-transform: rotate(90deg);
   /* Opera */
 }
-.menu > ul > li.spc > ul > li > a {
-  padding-left: 32px;
-}
 .menu > ul > li.spc > a {
   color: #ff6f3d;
   font-weight: bold;
-  border-left: 4px solid #ff6f3d;
 }
 .menu > ul > li.spc > a i {
   color: #ff6f3d;
-  padding-left: 18px;
+}
+.menu > ul > li.spc:after {
+  border: 7px solid transparent;
+  border-left: 7px solid #ff6f3d;
 }
