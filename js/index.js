@@ -46,5 +46,4 @@ $(document).ready(function(){
 	$(".nav-a").on("click",first_level);
 	$(".item>a").on("click",second_level);
 	$(".sec").on("click",sec);
-
 })
