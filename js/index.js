@@ -16,7 +16,7 @@ function second_level(event){
 function sec(event){
 	var obj=$(event.currentTarget);
 	event.stopPropagation();
-	obj.parent('a').next().slideToggle();
+	obj.next().slideToggle();
 	obj.toggleClass('click-span');
 }
 

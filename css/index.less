@@ -17,6 +17,7 @@
 				.menu-list{
 					>div{
 						width: 100%;
+						position: relative;
 						&:first-child{
 							border-top: 1px solid #e7e7e7;
 						}
@@ -39,26 +40,6 @@
 							>i.icon{
 								font-size: 18px;
 							}
-							span.sec{
-								display: inline-block;
-								width: 32px;
-								position: absolute;
-								top:0;
-								right: 0;
-								i{
-									color: #999;
-									font-size: 16px;
-								}
-							}
-							span.click-span{
-								i{
-									transform:rotate(90deg);
-									-ms-transform:rotate(90deg); 	 /* IE 9 */
-									-moz-transform:rotate(90deg); 	/* Firefox */
-									-webkit-transform:rotate(90deg); /* Safari 和 Chrome */
-									-o-transform:rotate(90deg); 	/* Opera */
-								}
-							}
 							&:after{
 								content: " ";
 								position: absolute;
@@ -77,10 +58,31 @@
 							i{
 								color: #ff6f3d;
 							}
-							span.sec{
+						}
+						span.sec{
+							display: inline-block;
+							width: 32px;
+							position: absolute;
+							top:12px;
+							right: 2px;
+							cursor: pointer;
+							i{
+								color: #999;
+								font-size: 16px;
+							}
+							&:hover{
 								i{
 									color: #ff6f3d;
 								}
+							}
+						}
+						span.click-span{
+							i{
+								transform:rotate(90deg);
+								-ms-transform:rotate(90deg); 	 /* IE 9 */
+								-moz-transform:rotate(90deg); 	/* Firefox */
+								-webkit-transform:rotate(90deg); /* Safari 和 Chrome */
+								-o-transform:rotate(90deg); 	/* Opera */
 							}
 						}
 						>div.second{
