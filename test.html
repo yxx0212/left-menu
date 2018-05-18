@@ -6,16 +6,21 @@
 	<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
 	<link rel="stylesheet" href="z-ui/css/zui.min.css">
 	<link rel="stylesheet" href="css/jQuery-menu.css">
+	<style>
+		.menu{
+			width: 200px;
+		}
+	</style>
 </head>
 <body>
-	<div class="menu-list"></div>
+	<div class="menu"></div>
 
 	<script src="js/jquery.js"></script>
 	<script src="z-ui/js/zui.min.js"></script>
 	<script src="js/jQuery-menu.js"></script>
 	<script>
 		$(function(){
-			$('.menu-list').menuPlugin();
+			$('.menu').menuPlugin();
 		})
 	</script>
 </body>
