@@ -1,0 +1,126 @@
+body{
+	ul{
+		padding: 0;
+	}
+	a{
+		font-family: "MicrosoftYahei";
+	}
+}
+.menu{
+	ul.menu-list{
+		list-style: none;
+		border-top:1px solid #e7e7e7;
+		width: 200px;
+		>li{
+			position: relative;
+			>a{
+				display: block;
+				width: 100%;
+				padding:10px;
+				color: #333;
+				font-size: 18px;
+				text-decoration: none;
+				outline: none;
+
+				>i{
+					display: inline-block;
+					width: 40px;
+					text-align: center;
+					padding: 0 10px;
+					color: #999;
+				}
+				&:hover{
+					text-decoration: none;
+					color: #ff6f3d;
+					font-weight: bold;
+					display: inline-block;
+					i{
+						color: #ff6f3d;
+					}
+				}
+				&:after{
+					content: " ";
+					position: absolute;
+					width: 100%;
+					height: 1px;
+					left: 0;
+					bottom: -1px;
+					background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.1) 15%, rgba(0, 0, 0, 0.1) 85%, rgba(0, 0, 0, 0) 100%);
+				}
+			}
+			& .list-toggle{
+				position: absolute;
+				color: #999;
+				top: 10px;
+			    right: 0px;
+			    left: auto;
+			    width: 24px;
+			    height: 24px;
+			    line-height: 24px;
+			    cursor: pointer;
+			    text-align: center;
+			    -webkit-transition: all .3s;
+			    -o-transition: all .3s;
+			    transition: all .3s;
+			}
+			ul{
+				list-style: none;
+				display: none;
+				padding-left: 8px;
+				li{
+					a{
+						width: 100%;
+						box-sizing: border-box;
+						display: block;
+						padding:8px;
+						padding-left: 60px;
+						color: #666;
+						font-size: 16px;
+						outline: none;
+						text-decoration: none;
+						&:hover{
+							background: #fff6f1;
+							color:#666;
+							text-decoration: none;
+							font-weight: normal;
+						}
+					}
+				}
+				li.second-active{
+					a{
+						background: #fff6f1;
+						color:#666;
+						text-decoration: none;
+						font-weight: normal;
+					}
+				}
+			}
+		}
+		li.active{
+			>a{
+				text-decoration: none;
+				color: #ff6f3d;
+				font-weight: bold;
+				display: inline-block;
+				i{
+					color: #ff6f3d;
+				}
+			}
+			.list-toggle{
+				color: #ff6f3d;
+			}
+		}
+		li.open{
+			.list-toggle{
+				transform:rotate(90deg);
+				-ms-transform:rotate(90deg); 	 //IE 9
+				-moz-transform:rotate(90deg); 	//Firefox
+				-webkit-transform:rotate(90deg);// Safari 和 Chrome
+				-o-transform:rotate(90deg); 	//Opera
+			}
+			ul{
+				display: block;
+			}
+		}
+	}
+}
