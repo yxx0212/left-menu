@@ -61,6 +61,9 @@ body a {
   -o-transition: all .3s;
   transition: all .3s;
 }
+.menu ul.menu-list > li .open-toggle {
+  transform: rotate(90deg);
+}
 .menu ul.menu-list > li ul {
   list-style: none;
   display: none;
@@ -100,14 +103,4 @@ body a {
 }
 .menu ul.menu-list li.active .list-toggle {
   color: #ff6f3d;
-}
-.menu ul.menu-list li.open .list-toggle {
-  transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
-  -webkit-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
-}
-.menu ul.menu-list li.open ul {
-  display: block;
 }

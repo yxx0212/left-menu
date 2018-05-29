@@ -29,7 +29,7 @@
 			_this.on("click",".has-list>a",function(e){
 				e.preventDefault();
 				$(this).next().toggle();
-				$(this).parent('.has-list').toggleClass('open');
+				$(this).prev().toggleClass('open-toggle');
 			});
 
 			_this.on("click",".has-list>ul>li>a",function(e){
@@ -44,6 +44,11 @@
 			_this.on("click",">li>a",function(){
 				$("li.second-active").removeClass('second-active');
 			});
+			_this.on("click",".list-toggle",function(){
+				$(this).toggleClass('open-toggle');
+				$(this).next().next().toggle();
+
+			})
 			
 		});
 	};

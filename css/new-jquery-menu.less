@@ -63,6 +63,9 @@ body{
 			    -o-transition: all .3s;
 			    transition: all .3s;
 			}
+			& .open-toggle{
+				transform:rotate(90deg);
+			}
 			ul{
 				list-style: none;
 				display: none;
@@ -108,18 +111,6 @@ body{
 			}
 			.list-toggle{
 				color: #ff6f3d;
-			}
-		}
-		li.open{
-			.list-toggle{
-				transform:rotate(90deg);
-				-ms-transform:rotate(90deg); 	 //IE 9
-				-moz-transform:rotate(90deg); 	//Firefox
-				-webkit-transform:rotate(90deg);// Safari 和 Chrome
-				-o-transform:rotate(90deg); 	//Opera
-			}
-			ul{
-				display: block;
 			}
 		}
 	}
