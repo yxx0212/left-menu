@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+    <link rel="stylesheet" href="z-ui/css/zui.min.css">
+    <script src="js/jquery.js"></script>
+    <script src="z-ui/js/zui.min.js"></script>
+    <style>
+        a.show-pwd {
+            position: relative;
+            top: -25px;
+            right: 10px;
+            float: right;
+            height: 0;
+        }
+        .captcha-group {
+            display: block;
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+        .captcha-group img {
+            float: right;
+            width: 36%;
+            height: 32px;
+            cursor: pointer;
+        }
+        .captcha-group input[type=text] {
+            float: left;
+            width: 60%;
+        }
+    </style>
+    <script>
+        $(function(){
+            var reg=/^(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z]).{6,20}$/;
+            var t1='aaaaaaaa';
+            var t2='11111111';
+            var t3='AAAAAAAA';
+            var t4='1111AAAA';
+            var t5='aa1AA@';
+            var t6='a1a1A1A3Az10ooOO';
+            console.log(reg.test(t1));
+            console.log(reg.test(t2));
+            console.log(reg.test(t3));
+            console.log(reg.test(t4));
+            console.log(reg.test(t5));
+            console.log(reg.test(t6));
+        })
+    </script>
+</head>
+<body>
+    <div class="hiddenBg" style="display: none;"></div>
+    <div class="login-bg" style="display: block; width: 400px;padding: 30px 30px 20px;">
+        <div class="auth-form">
+            <div class="auth-form-header">
+                <h1>登录雪梨教育</h1>
+            </div>
+            <div class="auth-form-body">
+                <div class="login-layer layer-statue">
+                    <form method="post" id="login">
+                        csrf_token
+                        <input type="hidden" value="" name="next"/>
+                        <div class="form-group">
+                            <label class="control-label" for="id_username">账号</label>
+                            <input type="text" name="username" placeholder="请输入你的邮箱或用户名" maxlength="30" class="form-control" title="" required id="id_username">
+                        </div>
+                        <div class="form-group ">
+                            <label class="control-label" for="id_password" style="display:block;">
+                                密码
+                                <a class="label-inline-help pull-right" href="/password_reset/">
+                                    <small>忘记密码？</small></a>
+                            </label>
+                            <div class="pwd-pd">
+                                <input id="id_password" class="form-control" name="password" type="password" name="password" placeholder="请输入你的密码" required="" style="padding-right: 25px;">
+                                <a href="javascript:void(0);" class="show-pwd">
+                                    <i class="icon icon-eye-open"></i>
+                                </a>
+                                <span class="help-block">账号或密码错误，请重新输入</span>
+                            </div>
+                        </div>
+                        <div class="form-group ">
+                            <label class="control-label" for="id_captcha_1">验证码</label>
+                            <div class="captcha-group">
+                                <input id="id_captcha_1" class="form-control verification-code" name="captcha_1" type="text" placeholder="验证码" required>
+                                <img id="captcha-image" src alt="captcha" title="点击切换验证码">
+                                <input id="id_captcha_0" name="captcha_0" type="hidden" value="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" id="submit" class="btn btn-success btn-block" data-loading-text="请稍候...">登录</button>
+                        </div>
+                    </form>
+                    <p class="form-help">新用户？<a href="/register/">注册一个账户</a>。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="auth-form pull-right">
+            <div class="auth-form-header">
+                <h1>登录雪梨教育</h1>
+            </div>
+
+            <div class="auth-form-body">
+                <form method="post" id="login-form" class="form">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="q8kcCvr13uVg4OoBgon0npQRRhUZJ6YVsSOEQP0xoC9YLlklCSXsqxjDFDQJSVMe">
+                    <input type="hidden" value="/team/ping-lun-xi-tong-ce-shi/" name="next">
+
+
+                        <div class="form-group"><label class="control-label" for="id_username">账号</label><input type="text" name="username" placeholder="请输入注册邮箱或原账号" maxlength="30" class="form-control" title="" required="" id="id_username"></div>
+
+
+                    <div class="form-group ">
+                        <label class="control-label" for="id_password" style="display:block;">
+                            密码
+                            <a class="label-inline-help pull-right" href="/password_reset/">
+                                <small>忘记密码？</small></a>
+                        </label>
+                        <div class="pwd-pd">
+                            <input type="password" name="password" placeholder="请输入密码" class="form-control" required="" id="id_password">
+                            <a href="javascript:void(0);" class="show-pwd">
+                                <i class="icon icon-eye-open"></i>
+                            </a>
+
+                        </div>
+                    </div>
+
+
+
+                    <button type="submit" id="submit" class="btn btn-success btn-block" data-loading-text="请稍候...">登录</button>
+                </form>
+                <p class="form-help">新用户？<a href="/register/">注册一个账户</a>。</p>
+            </div>
+        </div>
+
+
+    <textarea cols="20" rows="10" id="biao1">用户定义的代码区域</textarea>
+    <button type="button" onClick="copyUrl2()">点击 复制代码</button>
+    <script type="text/javascript">
+        function copyUrl2() {
+            var Url2 = document.getElementById("biao1");
+            Url2.select(); // 选择对象
+            document.execCommand("Copy"); // 执行浏览器复制命令
+            alert("已复制好，可贴粘。");
+        }
+    </script>
+</body>
+</html>

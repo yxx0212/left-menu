@@ -175,5 +175,145 @@
 			</div>
 		</div>
 	</div>
+	<p>段落的长度要大于十才会被过滤哈哈哈哈</p>
+	<p>这个段落长度很小</p>
+
+	<form>
+	  <div class="form-group">
+	    <label for="exampleInputAccount1">账号</label>
+	    <input type="text" class="form-control" id="exampleInputAccount1" required placeholder="电子邮件/手机号/用户名">
+	  </div>
+	  <div class="form-group">
+	    <label for="exampleInputPassword1">密码</label>
+	    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="">
+	  </div>
+	  <div class="form-group">
+	    <label for="exampleInputMoney1">捐赠金额</label>
+	    <div class="input-group">
+	      <span class="input-group-addon">￥</span>
+	      <input type="number" class="form-control" id="exampleInputMoney1" placeholder="最低捐赠金额为 ￥10.00">
+	      <span class="input-group-addon">.00</span>
+	    </div>
+	  </div>
+	  <button type="submit" class="btn btn-primary">提交</button>
+	</form>
 </body>
+<script>
+	$(function(){
+
+		/*console.log(Math.max.apply(null, [14, 3, 77]));
+		console.log(Math.max(...[14,5,38]));
+
+		//数组扩展运算符的应用
+		const a1=[1,2,3];
+		const a2=[...a1];  //数组的复制
+		console.log(a2);
+
+		//数组的合并
+		const arr1=['a','b','c'];
+		const arr2=['d','e'];
+		const arr3=['f'];
+		console.log(arr1.concat(arr2,arr3)); //es5写法
+		console.log([...arr1,...arr2,...arr3]);
+
+		const [first, ...rest] = [1, 2, 3, 4, 5];
+		console.log(first);
+		console.log(rest);
+
+		console.log([...'hello']);
+
+		let nodelist=document.querySelectorAll('tr');
+		let array=[...nodelist];
+		console.log(array);
+
+		let arrLike={
+			'0':'f',
+			'1':'a',
+			'2':'b',
+			'3':'c',
+			'length':'3'
+		}
+		const arr=Array.from(arrLike);
+		console.log(arr);
+
+		var ps=document.querySelectorAll('p');
+		var pArr=Array.from(ps).filter(p => {
+			return p.textContent.length>10;
+		});
+		console.log(pArr);
+
+		var s=new Set([1,2,3]);
+		console.log(s.add(2));
+
+		const arrs=[5,9,2,15].find((value,index,arr) => {return value >5}	);
+		console.log(arrs);
+
+		let arry=[2,4,6,8,9].copyWithin(1,3,4);
+		console.log(arry);*/
+
+		//对象的扩展
+		console.log(NaN === NaN);
+		console.log(Object.is(+0,-0));
+
+		/*const target={a:1};
+		const source1={b:2};
+		const source2={c:3};
+		Object.assign(target,source1,source2);
+		console.log(target);*/
+
+		/*const target = { a: { b: 'c', d: 'e' } }
+		const source = { a: { b: 'hello' } }
+		Object.assign(target, source);
+		console.log(target);
+
+		const v1='abc';
+		const v2=true;
+		const v3=3;
+		const obj=Object.assign({},v1,v2,v3);
+		console.log(obj);*/
+
+		const f={
+			foo:123,
+			get bar(){return 'abc'}
+		}
+		console.log(Object.getOwnPropertyDescriptors(f));
+
+		/*let proto={};
+		let obj={x:1};
+		Object.setPrototypeOf(obj,proto);
+		proto.y=2;
+		proto.z=3;
+		console.log(obj.z);
+
+		const obj={foo:'foo',bar:'barz'};
+		console.log(Object.keys(obj));*/
+
+		/*let {keys,values,entries}=Object;
+		let obj={a:1,b:2,c:3};
+
+		for(let key of keys(obj)){
+			console.log(key);
+		}
+
+		for(let value of values(obj)){
+			console.log(value);
+		}
+		for(let [key,value] of entries(obj)){
+			console.log([key,value]);
+		}*/
+
+		const objs={foo:'呵',bar:'哈'};
+		console.log(Object.keys(objs));
+		console.log(Object.values(objs));
+		console.log(Object.entries(objs));
+
+		const obj=Object.create({},{p:
+				{
+					value:42,
+				 	enumerable:true
+				}
+			});
+		console.log(Object.values(obj))
+	})
+</script>
 </html>
